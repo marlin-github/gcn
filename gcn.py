@@ -70,7 +70,7 @@ def setup_seed(seed):
 def train():
     model.train()
     optimizer.zero_grad()
-    logit, d_loss = model()
+    logit = model()
     pred = F.log_softmax(logit, dim=1)
     loss = F.nll_loss(pred[data.train_mask], data.y[data.train_mask])
     loss.backward()
