@@ -1,2 +1,0 @@
-# gcn
-gcn code
